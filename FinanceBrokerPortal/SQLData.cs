@@ -28,24 +28,9 @@ namespace FinanceBrokerPortal
 
         public bool CheckPropertyExists(string command)
         {
-            using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
-            {
-                SqlCommand sqlCommand = new SqlCommand(command);
-                SqlDataReader reader;
+            DataTable dataTable = GetSQLData(command);
 
-                sqlCommand.CommandType = CommandType.Text;
-                sqlCommand.Connection = sqlCon;
-
-                sqlCon.Open();
-
-                reader = sqlCommand.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    return true;
-                }
-                else return false;
-            }
+            return (dataTable.Rows.Count == 0) ? false : true;
         }
     }
 }
