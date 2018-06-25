@@ -62,53 +62,53 @@ namespace FinanceBrokerPortal
 
                     propertyRecord["pro_lendingrecacceptbyclient"] =
                         (txtLendRecAccByClient.Text == string.Empty) ?
-                        (String.IsNullOrEmpty(Convert.ToString(existingLenRecAccByClient)) ? (object)DBNull.Value : (object)DateTime.Parse(existingLenRecAccByClient.ToString(), new CultureInfo("en-GB")))
-                        : (object)DateTime.Parse(txtLendRecAccByClient.Text, new CultureInfo("en-GB"));
+                        (String.IsNullOrEmpty(Convert.ToString(existingLenRecAccByClient)) ? (object)DBNull.Value : (object)DateTime.ParseExact(existingLenRecAccByClient.ToString(), "dd/MM/yyyy", null))
+                        : (object)DateTime.ParseExact(txtLendRecAccByClient.Text, "dd/MM/yyyy", null);
 
                     propertyRecord["pro_financelodged"] =
                         (txtFinanceLodged.Text == string.Empty) ?
-                        (String.IsNullOrEmpty(Convert.ToString(existingFinanceLodged)) ? (object)DBNull.Value : (object)DateTime.Parse(existingFinanceLodged.ToString(), new CultureInfo("en-GB")))
-                        : (object)DateTime.Parse(txtFinanceLodged.Text, new CultureInfo("en-GB"));
+                        (String.IsNullOrEmpty(Convert.ToString(existingFinanceLodged)) ? (object)DBNull.Value : (object)DateTime.ParseExact(existingFinanceLodged.ToString(), "dd/MM/yyyy", null))
+                        : (object)DateTime.ParseExact(txtFinanceLodged.Text, "dd/MM/yyyy", null);
 
                     propertyRecord["pro_financeassessed"] =
                         (txtFinanceAssessed.Text == string.Empty) ?
-                        (String.IsNullOrEmpty(Convert.ToString(existingFinanceAssessed)) ? (object)DBNull.Value : (object)DateTime.Parse(existingFinanceAssessed.ToString(), new CultureInfo("en-GB")))
-                        : (object)DateTime.Parse(txtFinanceAssessed.Text);
+                        (String.IsNullOrEmpty(Convert.ToString(existingFinanceAssessed)) ? (object)DBNull.Value : (object)DateTime.ParseExact(existingFinanceAssessed.ToString(), "dd/MM/yyyy", null))
+                        : (object)DateTime.ParseExact(txtFinanceAssessed.Text, "dd/MM/yyyy", null);
 
                     propertyRecord["pro_conditionalapproval"] =
                         (txtConditionalApproval.Text == string.Empty) ?
-                        (String.IsNullOrEmpty(Convert.ToString(existingConditionalApproval)) ? (object)DBNull.Value : (object)DateTime.Parse(existingConditionalApproval.ToString()))
-                        : (object)DateTime.Parse(txtConditionalApproval.Text, new CultureInfo("en-GB"));
+                        (String.IsNullOrEmpty(Convert.ToString(existingConditionalApproval)) ? (object)DBNull.Value : (object)DateTime.ParseExact(existingConditionalApproval.ToString(), "dd/MM/yyyy", null))
+                        : (object)DateTime.ParseExact(txtConditionalApproval.Text, "dd/MM/yyyy", null);
 
                     propertyRecord["pro_valuationordered"] =
                         (txtValuationOrdered.Text == string.Empty) ?
-                        (String.IsNullOrEmpty(Convert.ToString(existingValuationOrdered)) ? (object)DBNull.Value : (object)DateTime.Parse(existingValuationOrdered.ToString(), new CultureInfo("en-GB")))
-                        : (object)DateTime.Parse(txtValuationOrdered.Text, new CultureInfo("en-GB"));
+                        (String.IsNullOrEmpty(Convert.ToString(existingValuationOrdered)) ? (object)DBNull.Value : (object)DateTime.ParseExact(existingValuationOrdered.ToString(), "dd/MM/yyyy", null))
+                        : (object)DateTime.ParseExact(txtValuationOrdered.Text, "dd/MM/yyyy", null);
 
                     propertyRecord["pro_valuationreturned"] =
                         (txtValuationReturned.Text == string.Empty) ?
-                        (String.IsNullOrEmpty(Convert.ToString(existingValuationReturned)) ? (object)DBNull.Value : (object)DateTime.Parse(existingValuationReturned.ToString(), new CultureInfo("en-GB")))
-                        : (object)DateTime.Parse(txtValuationReturned.Text, new CultureInfo("en-GB"));
+                        (String.IsNullOrEmpty(Convert.ToString(existingValuationReturned)) ? (object)DBNull.Value : (object)DateTime.ParseExact(existingValuationReturned.ToString(), "dd/MM/yyyy", null))
+                        : (object)DateTime.ParseExact(txtValuationReturned.Text, "dd/MM/yyyy", null);
 
                     propertyRecord["pro_financeapproveddate"] =
                         (txtFormalApproval.Text == string.Empty) ?
-                        (String.IsNullOrEmpty(Convert.ToString(existingFormalApproval)) ? (object)DBNull.Value : (object)DateTime.Parse(existingFormalApproval.ToString(), new CultureInfo("en-GB")))
-                        : (object)DateTime.Parse(txtFormalApproval.Text, new CultureInfo("en-GB"));
+                        (String.IsNullOrEmpty(Convert.ToString(existingFormalApproval)) ? (object)DBNull.Value : (object)DateTime.ParseExact(existingFormalApproval.ToString(), "dd/MM/yyyy", null))
+                        : (object)DateTime.ParseExact(txtFormalApproval.Text, "dd/MM/yyyy", null);
 
                     propertyRecord["pro_financedeclined"] =
                         (txtFinanceDeclined.Text == string.Empty) ?
-                        (String.IsNullOrEmpty(Convert.ToString(existingFinanceDeclined)) ? (object)DBNull.Value : (object)DateTime.Parse(existingFinanceDeclined.ToString(), new CultureInfo("en-GB")))
-                        : (object)DateTime.Parse(txtFinanceDeclined.Text, new CultureInfo("en-GB"));
+                        (String.IsNullOrEmpty(Convert.ToString(existingFinanceDeclined)) ? (object)DBNull.Value : (object)DateTime.ParseExact(existingFinanceDeclined.ToString(), "dd/MM/yyyy", null))
+                        : (object)DateTime.ParseExact(txtFinanceDeclined.Text, "dd/MM/yyyy", null);
 
                     propertyRecord["pro_mortgagedocsreturned"] =
                         (txtMortgageDocsReturned.Text == string.Empty) ?
-                        (String.IsNullOrEmpty(Convert.ToString(existingMortgageDocsReturned)) ? (object)DBNull.Value : (object)DateTime.Parse(existingMortgageDocsReturned.ToString(), new CultureInfo("en-GB")))
-                        : (object)DateTime.Parse(txtMortgageDocsReturned.Text, new CultureInfo("en-GB"));
+                        (String.IsNullOrEmpty(Convert.ToString(existingMortgageDocsReturned)) ? (object)DBNull.Value : (object)DateTime.ParseExact(existingMortgageDocsReturned.ToString(), "dd/MM/yyyy", null))
+                        : (object)DateTime.ParseExact(txtMortgageDocsReturned.Text, "dd/MM/yyyy", null);
 
                     propertyRecord["pro_settlementdate"] =
                         (txtSettlementDate.Text == string.Empty) ?
-                        (String.IsNullOrEmpty(Convert.ToString(existingSettlementDate)) ? (object)DBNull.Value : (object)DateTime.Parse(existingSettlementDate.ToString(), new CultureInfo("en-GB")))
-                        : (object)DateTime.Parse(txtSettlementDate.Text, new CultureInfo("en-GB"));
+                        (String.IsNullOrEmpty(Convert.ToString(existingSettlementDate)) ? (object)DBNull.Value : (object)DateTime.ParseExact(existingSettlementDate.ToString(), "dd/MM/yyyy", null))
+                        : (object)DateTime.ParseExact(txtSettlementDate.Text, "dd/MM/yyyy", null);
 
                     propertyRecord["pro_financenotes"] =
                         (string.IsNullOrEmpty(Convert.ToString(existingFinanceNotes)) && string.IsNullOrEmpty(txtFinanceNotes.Text)) ?
@@ -124,16 +124,16 @@ namespace FinanceBrokerPortal
                     DataRow dataRow;
                     dataRow = dataSet.Tables[1].NewRow();
                     dataRow["fbu_propertyid"] = propertyId;
-                    dataRow["fbu_lendingrecacceptbyclient"] = (txtLendRecAccByClient.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtLendRecAccByClient.Text, new CultureInfo("en-GB"));
-                    dataRow["fbu_financelodged"] = (txtFinanceLodged.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtFinanceLodged.Text, new CultureInfo("en-GB"));
-                    dataRow["fbu_financeassessed"] = (txtFinanceAssessed.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtFinanceAssessed.Text, new CultureInfo("en-GB"));
-                    dataRow["fbu_conditionalapproval"] = (txtConditionalApproval.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtConditionalApproval.Text, new CultureInfo("en-GB"));
-                    dataRow["fbu_valuationordered"] = (txtValuationOrdered.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtValuationOrdered.Text, new CultureInfo("en-GB"));
-                    dataRow["fbu_valuationreturned"] = (txtValuationReturned.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtValuationReturned.Text, new CultureInfo("en-GB"));
-                    dataRow["fbu_financeapproveddate"] = (txtFormalApproval.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtFormalApproval.Text, new CultureInfo("en-GB"));
-                    dataRow["fbu_financedeclined"] = (txtFinanceDeclined.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtFinanceDeclined.Text, new CultureInfo("en-GB"));
-                    dataRow["fbu_mortgagedocsreturned"] = (txtMortgageDocsReturned.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtMortgageDocsReturned.Text, new CultureInfo("en-GB"));
-                    dataRow["fbu_settlementdate"] = (txtSettlementDate.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtSettlementDate.Text, new CultureInfo("en-GB"));
+                    dataRow["fbu_lendingrecacceptbyclient"] = (txtLendRecAccByClient.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.ParseExact(txtLendRecAccByClient.Text, "dd/MM/yyyy", null);
+                    dataRow["fbu_financelodged"] = (txtFinanceLodged.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.ParseExact(txtFinanceLodged.Text, "dd/MM/yyyy", null);
+                    dataRow["fbu_financeassessed"] = (txtFinanceAssessed.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.ParseExact(txtFinanceAssessed.Text, "dd/MM/yyyy", null);
+                    dataRow["fbu_conditionalapproval"] = (txtConditionalApproval.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.ParseExact(txtConditionalApproval.Text, "dd/MM/yyyy", null);
+                    dataRow["fbu_valuationordered"] = (txtValuationOrdered.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.ParseExact(txtValuationOrdered.Text, "dd/MM/yyyy", null);
+                    dataRow["fbu_valuationreturned"] = (txtValuationReturned.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.ParseExact(txtValuationReturned.Text, "dd/MM/yyyy", null);
+                    dataRow["fbu_financeapproveddate"] = (txtFormalApproval.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.ParseExact(txtFormalApproval.Text, "dd/MM/yyyy", null);
+                    dataRow["fbu_financedeclined"] = (txtFinanceDeclined.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.ParseExact(txtFinanceDeclined.Text, "dd/MM/yyyy", null);
+                    dataRow["fbu_mortgagedocsreturned"] = (txtMortgageDocsReturned.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.ParseExact(txtMortgageDocsReturned.Text, "dd/MM/yyyy", null);
+                    dataRow["fbu_settlementdate"] = (txtSettlementDate.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.ParseExact(txtSettlementDate.Text, "dd/MM/yyyy", null);
                     dataRow["fbu_largefinancenotes"] = (txtFinanceNotes.Text == string.Empty) ? (object)DBNull.Value : txtFinanceNotes.Text;
                     dataRow["fbu_createddate"] = DateTime.Now;
                     dataSet.Tables[1].Rows.Add(dataRow);
