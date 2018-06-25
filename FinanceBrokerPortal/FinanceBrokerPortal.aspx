@@ -39,7 +39,7 @@
                     <legend>Finance Update Form</legend>
                     <asp:Label ID="lblResultMessage" runat="server" Text=""></asp:Label>
                     <div class="form-group" style="margin-top: 20px;">                        
-                            <label>MYOB ID:</label>
+                            <label>Client ID:</label>
                             <asp:TextBox ID="txtMyobId" runat="server" CssClass="form-control"></asp:TextBox>
                      </div>
                     <div class="form-group">                        
