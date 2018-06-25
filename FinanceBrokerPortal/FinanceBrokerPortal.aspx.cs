@@ -146,7 +146,7 @@ namespace FinanceBrokerPortal
                 }
                 else
                 {
-                    lblResultMessage.Text = "Matching MYOB ID could not be found; please check the MYOB ID and try again.";
+                    lblResultMessage.Text = "Client ID could not be found; please try again.";
                     lblResultMessage.CssClass = "alert alert-danger";
                 }
             }
