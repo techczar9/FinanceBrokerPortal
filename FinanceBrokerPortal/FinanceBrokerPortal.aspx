@@ -147,16 +147,16 @@
     </div>
     <script type="text/javascript">
         $(function () {
-            $('#landRecAccByClient').datetimepicker({ format: 'DD-MM-YYYY' });
-            $('#financeLodged').datetimepicker({ format: 'DD-MM-YYYY' });
-            $('#financeAssessed').datetimepicker({ format: 'DD-MM-YYYY' });
-            $('#conditionalApproval').datetimepicker({ format: 'DD-MM-YYYY' });
-            $('#valuationOrdered').datetimepicker({ format: 'DD-MM-YYYY' });
-            $('#valuationReturned').datetimepicker({ format: 'DD-MM-YYYY' });
-            $('#formalApproval').datetimepicker({ format: 'DD-MM-YYYY'});
-            $('#financeDeclined').datetimepicker({ format: 'DD-MM-YYYY' });
-            $('#mortgageDocumentsReturned').datetimepicker({ format: 'DD-MM-YYYY' });
-            $('#settlementDate').datetimepicker({ format: 'DD-MM-YYYY' });
+            $('#landRecAccByClient').datetimepicker({ format: 'DD/MM/YYYY' });
+            $('#financeLodged').datetimepicker({ format: 'DD/MM/YYYY' });
+            $('#financeAssessed').datetimepicker({ format: 'DD/MM/YYYY' });
+            $('#conditionalApproval').datetimepicker({ format: 'DD/MM/YYYY' });
+            $('#valuationOrdered').datetimepicker({ format: 'DD/MM/YYYY' });
+            $('#valuationReturned').datetimepicker({ format: 'DD/MM/YYYY' });
+            $('#formalApproval').datetimepicker({ format: 'DD/MM/YYYY'});
+            $('#financeDeclined').datetimepicker({ format: 'DD/MM/YYYY' });
+            $('#mortgageDocumentsReturned').datetimepicker({ format: 'DD/MM/YYYY' });
+            $('#settlementDate').datetimepicker({ format: 'DD/MM/YYYY' });
         });
     </script>
 </body>
