@@ -85,15 +85,6 @@ namespace FinanceBrokerPortal {
         protected global::System.Web.UI.WebControls.TextBox txtValuationReturned;
         
         /// <summary>
-        /// txtFormalApproval control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFormalApproval;
-        
-        /// <summary>
         /// txtFinanceDeclined control.
         /// </summary>
         /// <remarks>
@@ -110,15 +101,6 @@ namespace FinanceBrokerPortal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMortgageDocsReturned;
-        
-        /// <summary>
-        /// txtSettlementDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSettlementDate;
         
         /// <summary>
         /// txtFinanceNotes control.

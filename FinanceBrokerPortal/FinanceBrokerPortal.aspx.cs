@@ -52,10 +52,10 @@ namespace FinanceBrokerPortal
                     var existingConditionalApproval = dataSet.Tables[0].Rows[0]["pro_conditionalapproval"].ToString();
                     var existingValuationOrdered = dataSet.Tables[0].Rows[0]["pro_valuationordered"].ToString();
                     var existingValuationReturned = dataSet.Tables[0].Rows[0]["pro_valuationreturned"].ToString();
-                    var existingFormalApproval = dataSet.Tables[0].Rows[0]["pro_financeapproveddate"].ToString();
+                    //var existingFormalApproval = dataSet.Tables[0].Rows[0]["pro_financeapproveddate"].ToString();
                     var existingFinanceDeclined = dataSet.Tables[0].Rows[0]["pro_financedeclined"].ToString();
                     var existingMortgageDocsReturned = dataSet.Tables[0].Rows[0]["pro_mortgagedocsreturned"].ToString();
-                    var existingSettlementDate = dataSet.Tables[0].Rows[0]["pro_settlementdate"].ToString();
+                    //var existingSettlementDate = dataSet.Tables[0].Rows[0]["pro_settlementdate"].ToString();
                     var existingFinanceNotes = dataSet.Tables[0].Rows[0]["pro_financenotes"].ToString();
 
                     propertyRecord.BeginEdit();
@@ -90,10 +90,10 @@ namespace FinanceBrokerPortal
                         (String.IsNullOrEmpty(existingValuationReturned) ? (object)DBNull.Value : (object)DateTime.Parse(existingValuationReturned))
                         : (object)DateTime.Parse(txtValuationReturned.Text);
 
-                    propertyRecord["pro_financeapproveddate"] =
-                        (txtFormalApproval.Text == string.Empty) ?
-                        (String.IsNullOrEmpty(existingFormalApproval) ? (object)DBNull.Value : (object)DateTime.Parse(existingFormalApproval))
-                        : (object)DateTime.Parse(txtFormalApproval.Text);
+                    //propertyRecord["pro_financeapproveddate"] =
+                    //    (txtFormalApproval.Text == string.Empty) ?
+                    //    (String.IsNullOrEmpty(existingFormalApproval) ? (object)DBNull.Value : (object)DateTime.Parse(existingFormalApproval))
+                    //    : (object)DateTime.Parse(txtFormalApproval.Text);
 
                     propertyRecord["pro_financedeclined"] =
                         (txtFinanceDeclined.Text == string.Empty) ?
@@ -105,10 +105,10 @@ namespace FinanceBrokerPortal
                         (String.IsNullOrEmpty(existingMortgageDocsReturned) ? (object)DBNull.Value : (object)DateTime.Parse(existingMortgageDocsReturned))
                         : (object)DateTime.Parse(txtMortgageDocsReturned.Text);
 
-                    propertyRecord["pro_settlementdate"] =
-                        (txtSettlementDate.Text == string.Empty) ?
-                        (String.IsNullOrEmpty(existingSettlementDate) ? (object)DBNull.Value : (object)DateTime.Parse(existingSettlementDate))
-                        : (object)DateTime.Parse(txtSettlementDate.Text);
+                    //propertyRecord["pro_settlementdate"] =
+                    //    (txtSettlementDate.Text == string.Empty) ?
+                    //    (String.IsNullOrEmpty(existingSettlementDate) ? (object)DBNull.Value : (object)DateTime.Parse(existingSettlementDate))
+                    //    : (object)DateTime.Parse(txtSettlementDate.Text);
 
                     propertyRecord["pro_financenotes"] =
                         (string.IsNullOrEmpty(existingFinanceNotes) && string.IsNullOrEmpty(txtFinanceNotes.Text)) ?
@@ -130,10 +130,10 @@ namespace FinanceBrokerPortal
                     dataRow["fbu_conditionalapproval"] = (txtConditionalApproval.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtConditionalApproval.Text);
                     dataRow["fbu_valuationordered"] = (txtValuationOrdered.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtValuationOrdered.Text);
                     dataRow["fbu_valuationreturned"] = (txtValuationReturned.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtValuationReturned.Text);
-                    dataRow["fbu_financeapproveddate"] = (txtFormalApproval.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtFormalApproval.Text);
+                    //dataRow["fbu_financeapproveddate"] = (txtFormalApproval.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtFormalApproval.Text);
                     dataRow["fbu_financedeclined"] = (txtFinanceDeclined.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtFinanceDeclined.Text);
                     dataRow["fbu_mortgagedocsreturned"] = (txtMortgageDocsReturned.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtMortgageDocsReturned.Text);
-                    dataRow["fbu_settlementdate"] = (txtSettlementDate.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtSettlementDate.Text);
+                    //dataRow["fbu_settlementdate"] = (txtSettlementDate.Text == string.Empty) ? (object)DBNull.Value : (object)DateTime.Parse(txtSettlementDate.Text);
                     dataRow["fbu_largefinancenotes"] = (txtFinanceNotes.Text == string.Empty) ? (object)DBNull.Value : txtFinanceNotes.Text;
                     dataRow["fbu_createddate"] = DateTime.Now;
                     dataSet.Tables[1].Rows.Add(dataRow);
@@ -166,10 +166,10 @@ namespace FinanceBrokerPortal
             txtConditionalApproval.Text = "";
             txtValuationOrdered.Text = "";
             txtValuationReturned.Text = "";
-            txtFormalApproval.Text = "";
+            //txtFormalApproval.Text = "";
             txtFinanceDeclined.Text = "";
             txtMortgageDocsReturned.Text = "";
-            txtSettlementDate.Text = "";
+            //txtSettlementDate.Text = "";
             txtFinanceNotes.Text = "";
             lblResultMessage.Text = "";
             lblResultMessage.CssClass = "";

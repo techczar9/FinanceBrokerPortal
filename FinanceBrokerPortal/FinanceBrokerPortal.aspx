@@ -96,7 +96,7 @@
                                 </span>
                             </div>
                     </div>
-                    <div class="form-group">                        
+                    <%--<div class="form-group">                        
                             <label>Formal Approval</label>            
                             <div class='input-group date' id='formalApproval'>
                                 <asp:TextBox ID="txtFormalApproval" runat="server" CssClass="form-control"></asp:TextBox>
@@ -104,7 +104,7 @@
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
                             </div>
-                    </div>
+                    </div>--%>
                     <div class="form-group">                        
                             <label>Finance Declined</label>            
                             <div class='input-group date' id='financeDeclined'>
@@ -123,7 +123,7 @@
                                 </span>
                             </div>
                     </div>
-                    <div class="form-group">                        
+                    <%--<div class="form-group">                        
                             <label>Settlement Date</label>
                             <div class='input-group date' id='settlementDate'>
                                 <asp:TextBox ID="txtSettlementDate" runat="server" CssClass="form-control"></asp:TextBox>
@@ -131,7 +131,7 @@
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
                             </div>
-                    </div>
+                    </div>--%>
                     <div class="form-group">
                         <label>Notes</label>
                         <asp:TextBox ID="txtFinanceNotes" runat="server" CssClass="form-control" TextMode="MultiLine" Height="100px"></asp:TextBox>
@@ -153,10 +153,10 @@
             $('#conditionalApproval').datetimepicker({ format: 'YYYY-MM-DD' });
             $('#valuationOrdered').datetimepicker({ format: 'YYYY-MM-DD' });
             $('#valuationReturned').datetimepicker({ format: 'YYYY-MM-DD' });
-            $('#formalApproval').datetimepicker({ format: 'YYYY-MM-DD'});
+            //$('#formalApproval').datetimepicker({ format: 'YYYY-MM-DD'});
             $('#financeDeclined').datetimepicker({ format: 'YYYY-MM-DD' });
             $('#mortgageDocumentsReturned').datetimepicker({ format: 'YYYY-MM-DD' });
-            $('#settlementDate').datetimepicker({ format: 'YYYY-MM-DD' });
+            //$('#settlementDate').datetimepicker({ format: 'YYYY-MM-DD' });
         });
     </script>
 </body>
