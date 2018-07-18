@@ -15,7 +15,6 @@
             
             $("#txtMyobId").blur(function () {
                 var myobId = $(this).val();
-                alert(myobId);
                 $.ajax({
                     type: "POST",
                     url: 'Ajax.aspx/DataTableToJson',
