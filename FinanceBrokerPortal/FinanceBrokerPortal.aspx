@@ -26,17 +26,22 @@
                     failure: function (response) { alert("Something went wrong this time! Please try again in sometime."); }
                     });
                 function onSuccess(response) {
-                    var data = response.d;
-                    data = $.parseJSON(data);
-                    console.log(data);
-                    $('#txtLendRecAccByClient').val((data[0].pro_lendingrecacceptbyclient).substring(0, 10));
-                    $('#txtFinanceLodged').val((data[0].pro_financelodged).substring(0, 10));
-                    $('#txtFinanceAssessed').val((data[0].pro_financeassessed).substring(0, 10));
-                    $('#txtConditionalApproval').val((data[0].pro_conditionalapproval).substring(0, 10));
-                    $('#txtValuationOrdered').val((data[0].pro_valuationordered).substring(0, 10));
-                    $('#txtValuationReturned').val((data[0].pro_valuationreturned).substring(0, 10));
-                    $('#txtFinanceDeclined').val((data[0].pro_financedeclined).substring(0, 10));
-                    $('#txtMortgageDocsReturned').val((data[0].pro_mortgagedocsreturned).substring(0, 10));
+                    if (($.parseJSON(response.d)).length == 0) {
+                        alert('Client ID not found; please try again.');
+                    }
+                    else {
+                        var data = response.d;
+                        data = $.parseJSON(data);
+                        console.log(data.length);
+                        $('#txtLendRecAccByClient').val((data[0].pro_lendingrecacceptbyclient).substring(0, 10));
+                        $('#txtFinanceLodged').val((data[0].pro_financelodged).substring(0, 10));
+                        $('#txtFinanceAssessed').val((data[0].pro_financeassessed).substring(0, 10));
+                        $('#txtConditionalApproval').val((data[0].pro_conditionalapproval).substring(0, 10));
+                        $('#txtValuationOrdered').val((data[0].pro_valuationordered).substring(0, 10));
+                        $('#txtValuationReturned').val((data[0].pro_valuationreturned).substring(0, 10));
+                        $('#txtFinanceDeclined').val((data[0].pro_financedeclined).substring(0, 10));
+                        $('#txtMortgageDocsReturned').val((data[0].pro_mortgagedocsreturned).substring(0, 10));
+                    }
                 }
             });
         });
