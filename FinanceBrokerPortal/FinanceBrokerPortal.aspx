@@ -10,6 +10,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="Scripts/moment.js"></script>
     <script src="Scripts/bootstrap-datetimepicker.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $("#txtMyobId").blur(function () {
+                var myobId = $(this).val();
+                alert(myobId);
+                $.ajax({
+                    type: "POST",
+                    url: 'Ajax.aspx/DataTableToJson',
+                    data: '{ "myobId" : "' + myobId + '"}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: onSuccess,
+                    crossdomain: true,
+                    failure: function (response) { alert("Something went wrong this time! Please try again in sometime."); }
+                    });
+                function onSuccess(response) {
+                    var data = response.d;
+                    data = $.parseJSON(data);
+                    console.log(data);
+                    $('#txtLendRecAccByClient').val((data[0].pro_lendingrecacceptbyclient).substring(0, 10));
+                    $('#txtFinanceLodged').val((data[0].pro_financelodged).substring(0, 10));
+                    $('#txtFinanceAssessed').val((data[0].pro_financeassessed).substring(0, 10));
+                    $('#txtConditionalApproval').val((data[0].pro_conditionalapproval).substring(0, 10));
+                    $('#txtValuationOrdered').val((data[0].pro_valuationordered).substring(0, 10));
+                    $('#txtValuationReturned').val((data[0].pro_valuationreturned).substring(0, 10));
+                    $('#txtFinanceDeclined').val((data[0].pro_financedeclined).substring(0, 10));
+                    $('#txtMortgageDocsReturned').val((data[0].pro_mortgagedocsreturned).substring(0, 10));
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <div id="container">

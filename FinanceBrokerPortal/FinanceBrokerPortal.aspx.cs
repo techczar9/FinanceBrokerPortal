@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Drawing;
 using System.Globalization;
+using Newtonsoft.Json;
 
 namespace FinanceBrokerPortal
 {
